@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BTLVinamilk.Models.DMSUA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="heading_container justify-content-center">
+    <h2>
+        Danh mục
+    </h2>
+</div>
+<div class="container" style="font-size:25px">
+    <div class="img_container">
+        <table class="table">
+            <tr>
+                <th width="50%" style="text-align:center">
+                    @Html.DisplayNameFor(model => model.TenDM)
+                </th>
+                
+                <th width="50%" style="text-align:center">
+                    @Html.DisplayNameFor(model => model.AnhDM)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td align="center" style="padding-top:50px">
+                        @Html.ActionLink(item.TenDM, "Index/" + item.IDDM.Trim(), "SUAs")
+                    </td>
+                    
+                    <td align="center">
+                        @{
+                            string ImagePath = "~/wwwroot/images/" + item.AnhDM;
+                        }
+                        <a href='@Url.Action("Index/"+item.IDDM.Trim(), "SUAs")'>
+                            <img src="@Url.Content(ImagePath)" width="200" class="img-thumbnail" />
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+</div></div>

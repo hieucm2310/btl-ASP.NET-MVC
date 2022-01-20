@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTLVinamilk", "BTLVinamilk.csproj", "{566E8D69-EB16-487A-B0E4-926AC4946E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{566E8D69-EB16-487A-B0E4-926AC4946E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566E8D69-EB16-487A-B0E4-926AC4946E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566E8D69-EB16-487A-B0E4-926AC4946E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566E8D69-EB16-487A-B0E4-926AC4946E32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41D63DC0-D693-4B70-8A5A-3DC7A1F1162C}
+	EndGlobalSection
+EndGlobal

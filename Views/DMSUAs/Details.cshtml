@@ -1,0 +1,35 @@
+﻿@model BTLVinamilk.Models.DMSUA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>DMSUA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhDM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.IDDM.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

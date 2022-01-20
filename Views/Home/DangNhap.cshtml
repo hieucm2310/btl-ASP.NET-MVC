@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    tr{
+        height:40px;
+    }
+    tr td{
+        font-weight:bold;
+        padding-right:20px;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 30px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+        display:inline;
+        height:40px;
+        width:115px;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+</style>
+
+<h4 style="color:red; text-align:center">@ViewBag.Thongbao</h4>
+<table align="center" style="font-size:13pt">
+    <h2 style="text-align:center;font-weight:bold">ĐĂNG NHẬP</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr>
+            <td>Tên đăng nhập:</td>
+            <td>@Html.TextBox("Ten") @ViewData["Loi1"]</td>
+        </tr>
+        <tr>
+            <td>Mật khẩu:</td>
+            <td>@Html.Password("MatKhau") @ViewData["Loi2"]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <button type="submit" class="btn btn-primary" value="Đăng nhập">Đăng nhập</button>
+            <button type="button" class="btn btn-primary" onclick="window.history.back();">Trở lại</button></td>
+        </tr>
+
+    }
+</table>
+

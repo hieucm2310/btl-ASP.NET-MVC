@@ -1,0 +1,39 @@
+﻿@model BTLVinamilk.Models.DMSUA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<h2 style="font-weight:bold">CHI TIẾT DANH MỤC</h2>
+
+<div>
+    <h4>DMSUA</h4>
+    <hr />
+    <dl class="dl-horizontal" style="font-size:20px">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDM)
+        </dd>
+
+        <dt>
+            Ảnh danh mục
+               
+        </dt>
+
+        <dd>
+            @{
+                string ImagePath = "~/wwwroot/images/" + Model.AnhDM;
+            }
+            <img src="@Url.Content(ImagePath)" width="300" class="img-thumbnail" />
+        </dd>
+
+    </dl>
+</div>
+<p style="font-size:25px;padding-left:100px">
+    @Html.ActionLink("◄Sửa", "Edit", new { id = Model.IDDM.Trim() }) 
+</p>

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<BTLVinamilk.Models.SUA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="gallery_section layout_padding">
+
+    <div class="heading_container justify-content-center">
+        <h2>
+            Danh sách sữa
+        </h2>
+    </div>
+    <div class="container">
+        <div class="img_container">
+            @*<table class="table">
+                <tr style="text-align:center">
+                    <th width="150px">
+                        @Html.DisplayNameFor(model => model.DMSUA.TenDM)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TieuDe)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AnhBia)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoLuong)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GiaBan)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mota)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr style="text-align:center">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DMSUA.TenDM)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TieuDe)
+                        </td>
+                        <td>
+                            @{
+                                string ImagePath = "~/wwwroot/images/" + item.AnhBia;
+                            }
+                            <img src="@Url.Content(ImagePath)" width="200" class="img-thumbnail" />
+                            <br />
+                        </td>
+                        <td width="100px">
+                            @Html.DisplayFor(modelItem => item.SoLuong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaBan)
+                        </td>
+                        <td style="text-align:center">
+                            @Html.DisplayFor(modelItem => item.Mota)
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+            </table>*@
+            <table class="table">
+                <tr>
+                    <th width="50%" style="text-align:center">
+                        @Html.DisplayNameFor(model => model.TieuDe)
+                    </th>
+
+                    <th width="50%" style="text-align:center">
+                        @Html.DisplayNameFor(model => model.AnhBia)
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td align="center" style="padding-top:80px;font-size:30px">
+                            @Html.ActionLink(item.TieuDe, "Details/" + item.ID, "SUAs")
+                        </td>
+
+                        <td align="center">
+                            @{
+                                string ImagePath = "~/wwwroot/images/" + item.AnhBia;
+                            }
+                            <a href='@Url.Action("Details/"+item.ID, "SUAs")'>
+                                <img src="@Url.Content(ImagePath)" width="200" class="img-thumbnail" />
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</section>
